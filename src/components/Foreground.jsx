@@ -5,10 +5,10 @@ import Card from "./Card";
 const Foreground = () => {
   const ref = useRef(null);
   const [myData, setMyData] = useState([]);
-  const [refresh, setRefresh] = useState(0);
+  const [refresh, setRefresh] = useState(false);
 
   const refreshData = () => {
-    setRefresh((prev) => prev + 1);
+    setRefresh((prev) => !prev);
   };
 
   useEffect(() => {
